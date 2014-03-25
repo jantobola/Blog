@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<!-- TEMPLATE DEFINITIONS -->
+
+	<definition name="front-layout" template="/WEB-INF/views/layout/layout-front.jsp">
+		<put-attribute name="content" value="" />
+	</definition>
+
+	<definition name="admin-layout" template="/WEB-INF/views/layout/layout-admin.jsp">
+		<put-attribute name="content" value="" />
+	</definition>
+	
+	<definition name="error-layout" template="/WEB-INF/views/layout/layout-error.jsp">
+		<put-attribute name="content" value="" />
+	</definition>
+
+	<!-- CONTENT FRONT -->
+
+	<definition name="home" extends="front-layout">
+		<put-attribute name="content" value="/WEB-INF/views/content/home.jsp" />
+	</definition>
+
+	<definition name="about" extends="front-layout">
+		<put-attribute name="content" value="/WEB-INF/views/content/about.jsp" />
+	</definition>
+
+	<definition name="contact" extends="front-layout">
+		<put-attribute name="content" value="/WEB-INF/views/content/contact.jsp" />
+	</definition>
+
+	<definition name="blog" extends="front-layout">
+		<put-attribute name="content" value="/WEB-INF/views/content/blog.jsp" />
+	</definition>
+
+	<definition name="article" extends="front-layout">
+		<put-attribute name="content" value="/WEB-INF/views/content/article.jsp" />
+	</definition>
+
+	<!-- CONTENT ADMIN -->
+
+	<definition name="admin/login" extends="admin-layout">
+		<put-attribute name="content" value="/WEB-INF/views/login/login.jsp" />
+	</definition>
+
+	<definition name="admin/overview" extends="admin-layout">
+		<put-attribute name="content" value="/WEB-INF/views/admin/overview.jsp" />
+	</definition>
+
+	<definition name="admin/articles" extends="admin-layout">
+		<put-attribute name="content" value="/WEB-INF/views/admin/articles.jsp" />
+	</definition>
+
+	<definition name="admin/static" extends="admin-layout">
+		<put-attribute name="content" value="/WEB-INF/views/admin/static.jsp" />
+	</definition>
+	
+	<definition name="admin/article" extends="admin-layout">
+		<put-attribute name="content" value="/WEB-INF/views/admin/article.jsp" />
+	</definition>
+	
+	<definition name="admin/sections" extends="admin-layout">
+		<put-attribute name="content" value="/WEB-INF/views/admin/sections.jsp" />
+	</definition>
+
+	<!-- ERROR HANDLER -->
+	
+	<definition name="error/404" extends="error-layout">
+		<put-attribute name="content" value="/WEB-INF/views/error/error404.jsp" />
+	</definition>
+
+</tiles-definitions>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+	<http auto-config="true" use-expressions="true">
+		
+		<!-- NON AUTHENTICATION PAGES -->
+		<intercept-url pattern="/" access="permitAll" />
+
+		<!-- LOGIN FILTER -->
+		<intercept-url pattern="/admin/login" access="!isAuthenticated()" />
+<!-- 		<intercept-url pattern="/j_spring_security_check" access="!isAuthenticated()" /> -->
+<!-- 		<intercept-url pattern="/admin/logout" access="!isAuthenticated()" /> -->
+		<intercept-url pattern="/admin/loginfailed" access="!isAuthenticated()" />
+
+		<!-- RESOURCES AND OTHER URLs FILTER -->
+<!-- 		<intercept-url pattern="/resources/**" access="permitAll" /> -->
+		<intercept-url pattern="/admin/**" access="isAuthenticated()" />
+
+		<!-- FORM ADMIN LOGIN -->
+		<form-login login-page="${signin.url}" default-target-url="${signin.redirect.url}" authentication-failure-url="${signin.failure}" />
+		<logout logout-success-url="${signin.logout}" />
+		<remember-me key="jantobola-remember-me-key" />
+<!-- 		<access-denied-handler error-page="/access-denied" /> -->
+	</http>
+
+	<authentication-manager>
+		<authentication-provider ref="jpaAuthenticationProvider" />
+	</authentication-manager>
+
+	<beans:bean id="jpaAuthenticationProvider" class="cz.jantobola.blog.security.JpaAuthenticationProvider" />
+	<beans:bean id="jpaUserDetailsService" class="cz.jantobola.blog.security.JpaUserDetailService" />
+
+</beans:beans>
