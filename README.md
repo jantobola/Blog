@@ -11,19 +11,15 @@ Technologies:
 Frontend
 ---------
 
-Article list:
 ![Blog articles](/doc/2.png)
-![Blog articles](/doc/3.png)
-
-Article view:
+![Blog articles](/doc/3.png =500x)
+</hr>
 ![Blog articles](/doc/4.png)
 
 Administration
 ---------------
 
-Overview:
 ![Administration](/doc/6.png)
-
-New post:
+</hr>
 ![Administration](/doc/1.png)
 ![Administration](/doc/5.png)
