@@ -11,10 +11,10 @@ Technologies:
 Frontend
 ---------
 
-![Blog articles](/doc/2.png)
-![Blog articles](/doc/3.png =500x)
+<img src="/doc/2.png" alt="Blog articles"/>
+<img src="/doc/3.png" alt="Blog articles" style="width: 400px;"/>
 </hr>
-![Blog articles](/doc/4.png)
+<img src="/doc/4.png" alt="Blog articles"/>
 
 Administration
 ---------------
