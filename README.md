@@ -8,8 +8,7 @@ Technologies:
 - Apache Tiles 2, JSP
 - Maven
 
-Frontend
----------
+# Frontend
 
 ## Article list
 <img src="/doc/2.png" alt="Blog articles"/>
@@ -18,8 +17,8 @@ Frontend
 ## Full article view & gallery
 <img src="/doc/4.png" alt="Blog articles"/>
 
-Administration
----------------
+#Administration
+
 ## Posts & Drafts overview
 <img src="/doc/6.png" alt="Administration"/>
 </hr>
