@@ -1,18 +1,29 @@
 PersonalBlog
 ============
 
-Articles:
-![Blog articles](http://puu.sh/7IZMd/2c9dbef2e3.jpg)
-
-Administration:
-![Administration](http://puu.sh/7IZQe/62c0af02e2.png)
-
-Create new article:
-![Article creation](http://puu.sh/7IZWe/d1ab23ac89.png)
-
-Technology:
+Technologies:
 - Spring MVC
 - Spring Security
-- Spring Data JPA (Hibernate)
-- Apache Tiles 2
+- Spring Data JPA (Hibernate), MySQL
+- Apache Tiles 2, JSP
 - Maven
+
+Frontend
+---------
+
+Article list:
+![Blog articles](/doc/2.png)
+![Blog articles](/doc/3.png)
+
+Article view:
+![Blog articles](/doc/4.png)
+
+Administration
+---------------
+
+Overview:
+![Administration](/doc/6.png)
+
+New post:
+![Administration](/doc/1.png)
+![Administration](/doc/5.png)
